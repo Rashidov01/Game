@@ -1,0 +1,47 @@
+@mixin list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin bg-contain {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@mixin bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin dflex ($justify-content) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+}
+
+@mixin breakpoint-down ($size){
+  @media only screen  and (max-width: $size){
+    @content;
+  }
+}
+
+//retina screen
+@mixin cssretina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}

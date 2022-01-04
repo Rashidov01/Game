@@ -1,0 +1,131 @@
+.header {
+  padding: 20px 0;
+  @include dflex (space-between);
+}
+
+.sitenav__list {
+  @include list-unstyled;
+  display: flex;
+  align-items: center;
+}
+
+.sitenav-list__item {
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.sitenav-list__link {
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF
+}
+
+.header__menu {
+  @include list-unstyled;
+  display: flex;
+  align-items: center;
+}
+
+.header-menu__item {
+  position: relative;
+  margin-right: 20px;
+
+  &:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover .dropdown {
+    display: block;
+  }
+}
+
+.header-menu__link {
+  margin-right: 22px;
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    background-image: url(../../img/arrow.svg);
+    @include bg-contain;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    content: '';
+  }
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 100%;
+
+  display: none;
+  @include list-unstyled;
+  padding: 3px 12px 3px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 3px;
+}
+
+.dropdown__link {
+  display: block;
+  white-space: nowrap;
+  font-family: $font-sans;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: color 0.5s ease;
+  margin-bottom: 2px;
+
+  &:hover {
+    color: #FFB548;
+    ;
+  }
+}
+
+.header__btn{
+  background-image: url(../../img/hamburg.svg);
+  @include bg-contain;
+  width: 24px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+@include breakpoint-down(940px){
+  .header__icon{
+    display: none;
+  }
+
+  .sitenav{
+    display: none;
+  }
+
+  .header__btn{
+    display: block;
+  }
+}

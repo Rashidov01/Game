@@ -1,0 +1,120 @@
+.site-hero {
+  padding: 240px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.site-hero__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $font-main;
+  font-size: 80px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.site-hero__text {
+  margin-bottom: 30px;
+  font-family: $font-main;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+
+.site-hero__btn {
+  font-family: $font-sans;
+  font-weight: 700;
+  padding: 17px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #1A1917;
+  background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+  border-radius: 4px;
+}
+
+.site-hero__scroll {
+  position: absolute;
+  bottom: 40px;
+  margin-top: auto;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: justify;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after{
+    background-image: url(../../img/scroll-down.svg);
+    @include bg-contain;
+    width: 20px;
+    height: 10px;
+    margin-top: 5px;
+    content: '';
+  }
+}
+
+@include breakpoint-down(680px){
+  .site-hero__title{
+    font-size: 55px;
+    line-height: 50px;
+  }
+
+  .site-hero__text{
+    font-size: 20px;
+  }
+
+  .site-hero__btn{
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .site-hero__scroll{
+    font-size: 10px;
+
+    &::after{
+      width: 16px;
+      height: 8px;
+    }
+  }
+}
+
+@include breakpoint-down(480px){
+  .site-hero__title{
+    font-size: 44px;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+  }
+
+  .site-hero__text{
+    margin-bottom: 10px;
+    width: 287px;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}
+
+@include breakpoint-down(400px){
+  .site-hero__title{
+    font-size: 34px;
+  }
+
+  .site-hero__text{
+    font-size: 16px;
+  }
+
+  .site-hero__btn{
+    padding: 10px;
+  }
+}

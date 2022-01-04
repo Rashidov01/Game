@@ -1,0 +1,76 @@
+.system {
+  padding: 180px 0;
+  background-image: radial-gradient(33.26% 45% at 64.32% 47.1%, rgba(255, 255, 255, 0) 3.36%, rgba(0, 0, 0, 0) 19.22%, #080A0B 99.74%), url(../../img/bgi4.jpg);
+  @include bg-cover;
+  width: 100%;
+}
+
+.system__text {
+  margin-bottom: 10px;
+  font-family: $font-main;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.system__title {
+  font-family: $font-main;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.system__feature {
+  margin-top: 140px;
+  background-image: url("../../img/border.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  width: 48%;
+  height: 403px;
+  overflow: hidden;
+}
+
+.system-feature__item {
+  padding: 15px 20px;
+  width: 50%;
+  border-bottom: 1px solid #6C6D6E;
+  border-right: 1px solid #6C6D6E;
+  box-sizing: border-box;
+
+  &:last-child {
+    width: 100%;
+    border: none;
+  }
+}
+
+.system-feature__title {
+  margin-bottom: 8px;
+  font-family: $font-main;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: #FFB548;
+}
+
+.system-feature__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+// retina screen
+@include cssretina {
+  .system {
+    background-image: radial-gradient(33.26% 45% at 64.32% 47.1%, rgba(255, 255, 255, 0) 3.36%, rgba(0, 0, 0, 0) 19.22%, #080A0B 99.74%), url(../../img/bgi4@2x.jpg);
+  }
+}

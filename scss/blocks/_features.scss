@@ -1,0 +1,106 @@
+.features {
+  padding: 180px 0 250px;
+  background-image: radial-gradient(51.1% 80.48% at 30.85% 53.65%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 19.2%, rgba(4, 5, 6, 0.520671) 47.48%, #080A0B 99.74%), url(../../img/bgi3.jpg);
+  @include bg-cover;
+  width: 100%;
+}
+
+.features__inner{
+  width: 60%;
+  margin-right: -20px;
+  margin-left: auto;
+}
+
+.features__list {
+  @include list-unstyled;
+}
+
+.features__text{
+  margin-bottom: 12px;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+
+.features__desc {
+  margin-top: 8px;
+  width: 360px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.features__title {
+  margin-bottom: 72px;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 80px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.features__heading {
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 2px;
+  color: #FFB548;
+}
+
+.features__item{
+  margin-bottom: 34px;
+  display: flex;
+  align-items: center;
+
+  &:first-child::before{
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 80px;
+  }
+
+  &:nth-child(2)::before{
+    margin-right: 80px;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+
+  &:last-child::before{
+    margin-right: 80px;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+}
+
+@include breakpoint-down(1340px){
+  .features__heading{
+    font-size: 30px;
+  }
+
+  .features__desc{
+    width: 250px;
+    font-size: 14px;
+  }
+}
+
+@include cssretina{
+  .features{
+    background-image: radial-gradient(51.1% 80.48% at 30.85% 53.65%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 19.2%, rgba(4, 5, 6, 0.520671) 47.48%, #080A0B 99.74%), url(../../img/bg3@2x.jpg);
+  }
+}
