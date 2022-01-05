@@ -17,6 +17,7 @@
 }
 
 .system__title {
+  margin-bottom: 140px;
   font-family: $font-main;
   font-size: 80px;
   font-weight: 700;
@@ -28,15 +29,12 @@
 }
 
 .system__feature {
-  margin-top: 140px;
-  background-image: url("../../img/border.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 403px;
   display: flex;
   flex-wrap: wrap;
-  width: 48%;
-  height: 403px;
   overflow: hidden;
+  border: 2px solid #6C6D6E;
+  width: 50%;
 }
 
 .system-feature__item {
@@ -47,7 +45,7 @@
   box-sizing: border-box;
 
   &:last-child {
-    width: 100%;
+    width: 80%;
     border: none;
   }
 }
@@ -66,6 +64,72 @@
   font-size: 16px;
   line-height: 22px;
   color: #FFFFFF;
+}
+
+@include breakpoint-down (1280px){
+  .system__feature{
+    width: 60%;
+  }
+}
+
+@include breakpoint-down (880px){
+  .system__title{
+    font-size: 60px;
+  }
+
+  .system__text{
+    font-size: 20px;
+  }
+
+  .system__feature{
+    width: 70%;
+  }
+}
+
+@include breakpoint-down (600px){
+  .system{
+    padding: 100px 0;
+  }
+
+  .system__feature{
+    width: 100%;
+  }
+
+  .system__title{
+    font-size: 45px;
+    margin-bottom: 80px;
+    line-height: 45px;
+  }
+
+  .system__text{
+    font-size: 18px;
+  }
+
+  .system-feature__item{
+    padding: 12px 16px;
+  }
+
+  .system-feature__title{
+    font-size: 20px;
+  }
+
+  .system-feature__text{
+    font-size: 14px;
+  }
+}
+
+@include breakpoint-down (440px){
+  .system__title{
+    font-size: 30px;
+  }
+
+  .system__text{
+    font-size: 15px;
+  }
+
+  .system__title{
+    margin-bottom: 40px;
+  }
 }
 
 // retina screen

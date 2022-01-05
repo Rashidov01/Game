@@ -6,8 +6,7 @@
 }
 
 .features__inner{
-  width: 60%;
-  margin-right: -20px;
+  width: 40%;
   margin-left: auto;
 }
 
@@ -57,34 +56,19 @@
   margin-bottom: 34px;
   display: flex;
   align-items: center;
-
-  &:first-child::before{
+  
+  &::before{
+    margin-right: 80px;
     content: '';
     width: 14px;
     height: 14px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+
+  &--active::before{
     background-color: #fff;
-    border-radius: 50%;
-    margin-right: 80px;
-  }
-
-  &:nth-child(2)::before{
-    margin-right: 80px;
-    content: '';
-    width: 14px;
-    height: 14px;
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 50%;
-  }
-
-  &:last-child::before{
-    margin-right: 80px;
-    content: '';
-    width: 14px;
-    height: 14px;
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 50%;
   }
 }
 
@@ -96,6 +80,98 @@
   .features__desc{
     width: 250px;
     font-size: 14px;
+  }
+}
+
+@include breakpoint-down(1100px){
+  .features__item::before{
+    margin-right: 40px;
+  }
+}
+
+@include breakpoint-down(880px){
+  .features__title{
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .features__text{
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .features__heading{
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .features__desc{
+    width: 220px;
+    font-size: 14px;
+  }
+}
+
+@include breakpoint-down(780px){
+  .features__inner{
+    width: 45%;
+  }
+
+  .features__heading{
+    font-size: 20px;
+  }
+}
+
+@include breakpoint-down (680px){
+  .features{
+    padding: 110px 0 160px;
+  }
+
+  .features__inner{
+    width: 55%;
+  }
+
+  .features__heading{
+    font-size: 21px;
+    line-height: 21px;
+    letter-spacing: 2px;
+  }
+
+  .features__desc{
+    font-size: 12px;
+  }
+
+  .features__item::before{
+    margin-right: 15px;
+  }
+}
+
+@include breakpoint-down (500px) {
+  .features__inner{
+    width: 65%;
+  }
+}
+
+@include breakpoint-down (430px){
+  .features{
+    padding: 90px 0 120px;
+  }
+
+  .features__inner{
+    width: 75%;
+  }
+}
+
+@include breakpoint-down (380px){
+  .features__inner{
+    width: 88%;
+  }
+
+  .features__heading{
+    font-size: 18px;
+  }
+
+  .features__desc{
+    font-size: 10px;
   }
 }
 

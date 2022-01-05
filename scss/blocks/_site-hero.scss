@@ -1,5 +1,5 @@
 .site-hero {
-  padding: 240px 0;
+  padding: 220px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,6 +70,10 @@
     line-height: 50px;
   }
 
+  .site-hero{
+    padding: 180px 0;
+  }
+
   .site-hero__text{
     font-size: 20px;
   }
@@ -90,6 +94,10 @@
 }
 
 @include breakpoint-down(480px){
+  .site-hero{
+    padding: 140px 0;
+  }
+
   .site-hero__title{
     font-size: 44px;
     letter-spacing: 3px;
